@@ -1,0 +1,25 @@
+#list {
+    grid-area: list;
+}
+
+#register {
+    grid-area: register;
+}
+
+#main-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "list register";
+    row-gap: 20px;
+    column-gap: 20px;
+    align-items: center;
+}
+
+@media screen and (max-width: 450px){
+    #main-grid{
+        grid-template-columns: 1fr;
+        grid-template-areas: "list"
+        "register"
+        ;
+    }
+}
